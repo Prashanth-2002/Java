@@ -1,0 +1,11 @@
+class HelloWorld {
+    public static void main(String[] args) {
+
+        int a = 5;
+        int b=20;
+       if(a>b)
+       system.out.print("A is bigger")
+        else
+        System.out.print("Bis bigger");
+    }
+}
