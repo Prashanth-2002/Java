@@ -1,0 +1,12 @@
+class HelloWorld {
+    public static void main(String[] args) {
+       int year =2010;
+       
+        if(year%400==0)
+         System.out.print("YES");
+        else if (year%4==0 && year%100!=0) 
+         System.out.print("YES");
+        else
+         System.out.print("NO");
+    }
+}
