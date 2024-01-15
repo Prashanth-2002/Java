@@ -1,0 +1,24 @@
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int check= 1221;
+        int num=1221;
+        if(check<0){
+         System.out.print("No");
+         return;
+        }
+        else{
+       int rem=0;
+       while(num!=0){
+          int div=num%10;
+           rem=10*rem+div;
+           num=num/10;
+       }
+       if(check==rem)
+         System.out.print("Yes");
+       else
+         System.out.print("No");
+    }
+    }
+}
