@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the size of the array:");
+        int size = scanner.nextInt();
+
+        int[] arr = new int[size];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        ArrayList<Integer> result = valueEqualToIndex(arr, size);
+
+        if (result.isEmpty()) {
+            System.out.println("No elements found where value is equal to index.");
+        } else {
+            System.out.println("Elements where value is equal to index: " + result);
+        }
+    }
+
+    static ArrayList<Integer> valueEqualToIndex(int arr[], int n) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == i + 1) {
+                ans.add(i + 1);
+            }
+        }
+        return ans;
+    }
+}
