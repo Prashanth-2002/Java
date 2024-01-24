@@ -1,0 +1,26 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Solution {
+    // Function to find the missing number in an array of consecutive numbers
+    int missingNumber(int array[], int n) {
+        int sum = 0;
+        for (int i = 0; i < n - 1; i++) {
+            sum += array[i];
+        }
+        return n * (n + 1) / 2 - sum;
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        // Example usage
+        int[] exampleArray = {1, 2, 3, 5}; // Missing number: 4
+        int n = 5;
+
+        // Call the missingNumber method and print the result
+        int result = solution.missingNumber(exampleArray, n);
+        System.out.println("Missing Number: " + result);
+    }
+}
