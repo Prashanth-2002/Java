@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+class Solution {
+    // Function to check if two arrays are equal or not.
+    public static boolean check(long A[], long B[], int N) {
+        // Step 1: Sort the arrays
+        Arrays.sort(A);
+        Arrays.sort(B);
+
+        // Step 2: Use Arrays.equals to check equality
+        return Arrays.equals(A, B);
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        long[] array1 = {4, 2, 1, 3};
+        long[] array2 = {1, 2, 3, 4};
+
+        // Call the check method and print the result
+        boolean result = check(array1, array2, array1.length);
+
+        if (result) {
+            System.out.println("Arrays are equal");
+        } else {
+            System.out.println("Arrays are not equal");
+        }
+    }
+}
